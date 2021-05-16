@@ -4,7 +4,7 @@ from typing import List
 
 
 def main():
-    classes()
+    yr()
 
 
 def first():
@@ -223,7 +223,18 @@ def multip(list = [], *args):
 
 
 def classes():
-    pass
+    print(type(3))
+    print("I'm lower".upper())
+    me = Square(5, 5)
+    print(me.width)
+    f = fish()
+    f.speak()
+    c = cat()
+    p1 = person("tim")
+    p2 = person("jim")
+    person.add_person()
+    print(person.num_p_())
+
 
 
 
@@ -231,14 +242,105 @@ class Square:
     def __init__(self, height="0", width="0"):
         self.height = height
         self.width = width
+    
     @property
-    def height(selfself):
-        prit("retrieving height")
+    def height(self):
+        print("ret height")
         return self.__height
 
+    @height.setter
+    def height(self, value):
+        if value.isdigit():
+            self.__height = value
+        else:
+            print("not in")
+    
+    def get_area(self):
+        return int(self.width) * int(self.__height)
 
 
 
+
+def yr():
+    s = Square()
+    print(s.height)
+    print(s.get_area())
+    c = cat()
+    
+
+class animal:
+    def __init__(self, name = "unknown", weight = 0):
+        self.__name = name
+        self.__weight = weight
+
+    @property
+    def name(self, name):
+        self.__name = name
+
+    def make_noise(self):
+        print("grrrrr")
+
+    def __str__(self):
+        return "{} is a {} and says {}".format(self.name, type(self), self.make_noise())
+    
+
+        
+    
+
+
+
+
+class pet():
+    def __init__(self, name = "bob", age = 21):
+        self.name = name
+        self.age = age
+
+    def show(self):
+        print(f"I am {self.name} and I am {self.age} years old.")
+
+    def speak(self):
+        print("I don't know how that sounds")
+
+class cat(pet):
+    def __init__(self, name = "bob", age = 21, color = "blue"):
+        super().__init__(name, age)
+        pet.__init__(self, name, age)
+        self.color = color
+
+    def speak(self):
+        print("meow")
+
+class dog(pet):
+    def speak(self):
+        print("bark")
+
+class fish(pet):
+    pass
+
+class person:
+    num_p = 0
+    def __init__(self, name):
+        self.name = name
+        person.add_person()
+
+    @classmethod
+    def num_p_(cls):
+        return cls.num_p
+
+    @classmethod
+    def add_person(cls):
+        cls.num_p +=1
+
+class myath:
+
+    @staticmethod
+    def add5(x):
+        return x + 5
+    
+
+
+
+        
 
 
 if __name__ == '__main__':
