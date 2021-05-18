@@ -1,10 +1,27 @@
 import sys, math, random, threading, time
 from functools import reduce
 from typing import List
+import subprocess
+import os
 
 
 def main():
-    yr()
+    vr()
+
+
+def vr():
+    #cmd = 'ls'
+    #cmd = ['ls', '-Ss']
+    cmd = ['./main']
+    sp = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+    rc = sp.wait()
+    out, err = sp.communicate()
+
+    print(f'OUTPUT:\n {out.splitlines()}')
+    print(f'ERROR:\n {err}')
+
+    print(sys.platform)
+
 
 
 def first():
@@ -266,6 +283,7 @@ def yr():
     print(s.height)
     print(s.get_area())
     c = cat()
+
     
 
 class animal:
