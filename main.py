@@ -4,7 +4,17 @@ from typing import List
 import subprocess
 import os
 
+'''
+    a buncha links for learning:
+    
+    a complete guide to print()
+    https://realpython.com/python-print/
 
+    exceptions
+    https://docs.python.org/3/tutorial/errors.html
+
+    
+'''
 def main():
     vr()
 
@@ -21,6 +31,13 @@ def vr():
     print(f'ERROR:\n {err}')
 
     print(sys.platform)
+    
+
+class add:
+    def __init__(self, num: int):
+        self.num = num
+        print("num=",self.num)
+        self = add(self.num + 1)
 
 
 
