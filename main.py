@@ -17,8 +17,7 @@ import os
 '''
 def main():
     vr()
-
-
+    
 def vr():
     #cmd = 'ls'
     #cmd = ['ls', '-Ss']
