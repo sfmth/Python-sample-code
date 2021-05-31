@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-"""
+""" 
     https://www.youtube.com/watch?v=wB9C0Mz9gSo&list=PLGLfVvz_LVvSX7fVd4OUFp_ODd86H0ZIY&index=84
 """
 
